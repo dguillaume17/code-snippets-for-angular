@@ -1,0 +1,29 @@
+<div class="container">
+    Component 1
+    <span>nbDoCheck={{nbDoCheck}}</span>
+    <span>nbChanges={{nbChanges}}</span>
+    <span>{{user|json}}</span>
+    <button (click)="onChangeUserClicked1()">1</button>
+    <button (click)="onChangeUserClicked2()">2</button>
+    <button (click)="onChangeDetectionButtonClicked()">3</button>
+    <button (click)="onMarkForCheckButtonClicked()">4</button>
+</div>
+
+<ng-container *ngIf="shouldDisplayChildren">
+    <div class="links">
+    </div>
+    
+    <div class="children">
+        <app-component-1 class="child child-left"
+            [level]="level + 1"
+            [user]="user">
+        </app-component-1>
+    
+        <app-component-1 class="child child-right"
+            [level]="level + 1"
+            [user]="user">
+        </app-component-1>
+    </div>
+</ng-container>
+
+

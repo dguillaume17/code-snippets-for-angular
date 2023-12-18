@@ -1,0 +1,33 @@
+:host {
+    display: flex;
+    flex-direction: column;
+
+    // border: 1px solid red;
+}
+
+.container {
+    border: 2px solid blue;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.links {
+    display: flex;
+    height: 50px;
+    width: 50%;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+    transform: translateX(50%);
+}
+
+.children {
+    display: flex;
+    gap: 25px;
+
+    .child {
+        flex-grow: 1;
+    }
+}
