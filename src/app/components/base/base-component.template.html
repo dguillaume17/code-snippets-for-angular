@@ -1,0 +1,36 @@
+<h1>{{componentDisplayName}} ({{changeDetectionStrategyToDisplay}})</h1>
+
+<div class="actions">
+    <button (click)="onActionButtonClicked()">Counter + 1</button>
+</div>
+
+<div class="values">
+    Counter = {{counter}}
+</div>
+
+<div class="children">
+    <app-parent-a *ngIf="shouldAppendParentAComponent" [counter]="counter">
+
+    </app-parent-a>
+    
+    <app-parent-b *ngIf="shouldAppendParentBComponent" [counter]="counter">
+    
+    </app-parent-b>
+    
+    <app-child-a-1 *ngIf="shouldAppendChildA1Component" [counter]="counter">
+    
+    </app-child-a-1>
+    
+    <app-child-a-2 *ngIf="shouldAppendChildA2Component" [counter]="counter">
+    
+    </app-child-a-2>
+    
+    <app-child-b-1 *ngIf="shouldAppendChildB1Component" [counter]="counter">
+    
+    </app-child-b-1>
+    
+    <app-child-b-2 *ngIf="shouldAppendChildB2Component" [counter]="counter">
+    
+    </app-child-b-2>
+</div>
+
